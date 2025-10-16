@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anomalia & Co — Landing</title>
+  <meta name="description" content="Site vitrine angoissant pour le jeu Anomalia & Co — bande-annonce, galerie, précommande" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <style>
+    /* Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-left.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+  <video class="bg-video" src="/assets/bg_fog_short.mp4" autoplay muted loop playsinline></video>
+  <div class="overlay-vignette"></div>
+  <div class="scanlines"></div>
+
+  <header class="fade-up">
+    <div class="brand">
+      <div>
+        <img src="images/Logo_Anomalia_3_alasuite_sansfond.png" alt="logo anomalia" id="logo">        
+        <p id="minitxt">Enquêtes paranormales · Jeu d'horreur</p>
+      </div>
+    </div>
+    <div class="other">
+      <a href="index.html">Accueil</a>
+      <a href="contact.html">Contact</a>
+      <a href="download.html">Télécharger</a>
+    </div>
+    <div class="controls">
+      <button id="muteBtn" class="btn">Son on (M)</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <section class="hero fade-up">
+      <div>
+        <h2 class="title fade-left">ANOMALIA &amp; CO</h2>
+        <p class="lead fade-up">
+          Synopsis : Le joueur travaille pour une entreprise collectant des données sur des esprits et lieux hantés. 
+          Ce dernier se retrouve dans le service de repérage, son but est de passer du temps dans ces lieux afin de rencontrer des anomalies 
+          et de les reporter à ses supérieurs qui nettoieront ces dernières et d’analyser les données fournies par le personnage afin de pouvoir exorciser l’esprit. 
+          Le joueur étant au stade le plus bas de l’entreprise sert principalement de sujet de test et de sacrifice pour le bénéfice de l’entreprise.
+        </p>
+      </div>
+      <aside class="fade-left">
+        <div id="detector" class="detector">
+          <div class="top">
+            <div>
+              <div style="font-size:12px; color:var(--muted)">Détecteur EMF</div>
+              <div class="value" id="detValue">0.2</div>
+            </div>
+          </div>
+          <div class="bar"><i id="barFill"></i></div>
+          <div class="status" id="status">Statut : <span>Aucune anomalie</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="video-container fade-up">
+      <iframe src="/assets/trailer_anomalia.mp4" allowfullscreen></iframe>
+    </section>
+
+    <footer class="footer-content fade-up">
+      © <span id="year"></span> Anomalia & Co
+      <div class="gallery">
+        <a href="https://www.instagram.com/"><img src="images/logo/insta.png" alt="aller sur la page instagram" id="in"></a>
+        <a href="https://www.youtube.com/"><img src="images/logo/youtube.png" alt="aller sur la chaine youtube" id="you"></a>
+        <a href="https://www.tiktok.com/fr/"><img src="images/logo/tiktok.png" alt="aller sur la chaine tiktok" id="tik"></a>
+      </div>
+    </footer>
+  </main>
+
+  <audio id="ambient" src="son/musique.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
