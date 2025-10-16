@@ -31,26 +31,36 @@
   </style>
 </head>
 <body>
+  <!-- Effets visuels -->
   <video class="bg-video" src="/assets/bg_fog_short.mp4" autoplay muted loop playsinline></video>
   <div class="overlay-vignette"></div>
   <div class="scanlines"></div>
 
+  <!-- HEADER -->
   <header class="fade-up">
-    <div class="brand">
-      <div>
-        <img src="images/Logo_Anomalia_3_alasuite_sansfond.png" alt="logo anomalia" id="logo">        
-        <p id="minitxt">Enquêtes paranormales · Jeu d'horreur</p>
-      </div>
+  <div class="brand">
+    <div>
+      <img src="images/Logo_Anomalia_3_alasuite_sansfond.png" alt="logo anomalia" id="logo">        
+      <p id="minitxt">Enquêtes paranormales · Jeu d'horreur</p>
     </div>
-    <div class="other">
-      <a href="index.html">Accueil</a>
-      <a href="contact.html">Contact</a>
-      <a href="download.html">Télécharger</a>
-    </div>
-    <div class="controls">
-      <button id="muteBtn" class="btn">Son on (M)</button>
-    </div>
-  </header>
+  </div>
+
+  <!-- Bouton burger -->
+  <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Menu de navigation -->
+  <nav class="other" id="navMenu">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="contact.html">Contact</a>
+    <a href="download.html">Télécharger</a>
+  </nav>
+
+  <div class="controls">
+    <button id="muteBtn" class="btn">Son on (M)</button>
+  </div>
+</header>
 
   <main id="app">
     <section class="hero fade-up">

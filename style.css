@@ -506,3 +506,40 @@ footer {
     display: none;
   }
 }
+/* Empêche tout scroll horizontal sur la page */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ===== MENU BURGER STABLE ===== */
+@media (max-width: 768px) {
+  .other {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transform: translateX(100%); /* hors de l'écran par défaut */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 4000;
+    pointer-events: none; /* bloque les clics quand caché */
+  }
+
+  .other.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all; /* réactive les clics */
+  }
+
+  body.menu-open {
+    overflow: hidden; /* empêche de scroller le fond */
+  }
+}
