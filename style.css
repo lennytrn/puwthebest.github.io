@@ -543,3 +543,20 @@ html, body {
     overflow: hidden; /* empêche de scroller le fond */
   }
 }
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
